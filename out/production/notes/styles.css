@@ -1,0 +1,11 @@
+.button {
+   -fx-background-color: #909090;
+}
+
+.button:armed {
+   -fx-background-color: #404040;
+}
+
+#listViewContainer {
+   -fx-background-color: #909090;
+}

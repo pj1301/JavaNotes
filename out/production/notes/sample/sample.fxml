@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.shape.SVGPath?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+      <AnchorPane prefHeight="36.0" prefWidth="600.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+         <TextField fx:id="textInput" layoutX="14.0" layoutY="10.0" prefHeight="27.0" prefWidth="430.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+         <Button styleClass="button" layoutX="531.0" layoutY="16.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="10.0" onAction="#handleSave" >
+            <graphic>
+               <SVGPath content="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41zM9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#27c93d" />
+            </graphic>
+         </Button>
+         <Button styleClass="button" onAction="#handleEdit" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="60.0" prefWidth="40.0">
+            <graphic>
+               <SVGPath content="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="#3089c9" />
+            </graphic>
+         </Button>
+         <Button styleClass="button" onAction="#handleDelete" AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" prefWidth="40.0">
+            <graphic>
+               <SVGPath content="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z" fill="#c30707" />
+            </graphic>
+         </Button>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <ListView fx:id="listViewContainer" id="listViewContainer" />
+   </center>
+</BorderPane>
