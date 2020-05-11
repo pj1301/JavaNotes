@@ -2,7 +2,6 @@ package fileServer;
 
 import note.Note;
 
-import javafx.collections.ObservableList;
 import java.io.*;
 import java.util.ArrayList;
 
