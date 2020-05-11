@@ -1,23 +1,21 @@
 package fileServer;
 
-import javafx.collections.ObservableList;
+import note.Note;
 
+import javafx.collections.ObservableList;
 import java.io.*;
-import java.util.List;
+import java.util.ArrayList;
 
 public class FileServer {
 
-   public void saveData(List<String> content) throws Exception {
-      FileOutputStream fileOut = new FileOutputStream("/tmp/appData.ser");
-      ObjectOutputStream outStream = new ObjectOutputStream(fileOut);
-      outStream.writeObject(content);
-      outStream.close();
-      fileOut.close();
+   public void saveData(ArrayList<Note> noteList) throws Exception {
+      ObjectOutputStream objectStream = new ObjectOutputStream(new FileOutputStream("tmp/appData.ser"));
+      objectStream.writeObject(noteList);
    }
 
-   public void retrieveData() {}
+   public ArrayList<Note> retrieveData() throws Exception {
+      ObjectInputStream objectStream = new ObjectInputStream(new FileInputStream("tmp/appData.ser"));
+      return (ArrayList<Note>) objectStream.readObject();
+   }
 
-   public void editData() {}
-
-   public void removeData() {}
 }
